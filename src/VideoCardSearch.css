@@ -33,10 +33,10 @@
 }
 
 .videocardsearch__videotitle p {
-    max-height: 2.8em;
+    max-height: 2.4em;
     max-width: 52vw;
     overflow: hidden;
-    /* white-space: nowrap; */
+    white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 20px;
     color: black;
@@ -62,7 +62,7 @@
 }
 
 .videocardsearch__description {
-    max-height: 1.6em;
+    max-height: 1.2em;
     font-size: 12px;
     color: gray;
     font-weight: 400;
