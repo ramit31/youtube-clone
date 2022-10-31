@@ -33,3 +33,6 @@ npm start
 ```
 
 ## Demo
+![Home page](/demo/demo-part-1.gif)
+
+![Search page](/demo/demo-part-2.gif)
