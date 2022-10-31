@@ -2,6 +2,12 @@
 
 Youtube clone using React.
 
+## Core packages
+
+1. ReactJs
+2. React-router
+3. Material UI
+
 ## Features
 
 1. Home page
