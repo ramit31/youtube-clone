@@ -1,0 +1,35 @@
+.searchresultvideos {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 40px;
+    padding-right: 4vw;
+    margin-right: auto;
+    padding-top: 5px;
+    overflow-x: hidden;
+    min-width: 450px;
+}
+
+.searchresultvideos__filter {
+    display: flex;
+    color: rgb(75, 73, 73);
+    align-items: center;
+}
+
+.searchresultvideos__filter h4 {
+    margin-left: 7px;
+    font-weight: 500;
+    font-size: 15px;  
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.searchresultvideos__filter:hover {
+    color: black;
+}

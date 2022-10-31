@@ -1,0 +1,16 @@
+.sidebar {
+    width: 200px;
+    min-width: 200px;
+}
+
+.sidebarmini {
+    width: 75px;
+}
+
+.sidebar hr {
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

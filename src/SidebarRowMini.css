@@ -1,0 +1,31 @@
+.sidebarrowmini {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.sidebarrowmini__icon {
+    color: #606060;
+}
+
+.sidebarrowmini__title {
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: black;
+
+}
+
+.sidebarrowmini:hover {
+    background-color: rgb(232, 229, 229);
+    cursor: pointer;
+}
+
+.sidebarrowmini.selected .sidebarrowmini__title {
+    font-weight: 700;
+}
+
+.sidebarrowmini.selected .sidebarrowmini__icon {
+    color: black;
+}

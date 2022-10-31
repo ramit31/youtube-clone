@@ -1,0 +1,25 @@
+.hoverdescriptionhidden {
+    display: none;
+}
+
+.hoverdescriptionparent {
+    display: flex;
+    align-items: center;
+}
+
+.hoverdescription:hover + .hoverdescriptionhidden {
+    display: inline-block;
+    background-color: rgb(60, 55, 55);
+    color: white;
+    opacity: 80%;
+    position: absolute;
+    padding: 12px 7px;
+    margin-top: 120px;
+    font-size: 12px;
+    border-radius: 0.2em;
+    z-index: 100;
+}
+
+.hoverdescription:hover + .hoverdescriptionhidden.hoverdescriptionhiddensearch {
+    margin-left: 160px;
+}

@@ -1,0 +1,119 @@
+.header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    z-index: 100;
+    background-color: white;
+    min-width: 550px;
+}
+
+.header__logo {
+    height: 20px;
+    margin-left: 20px;
+}
+
+.header__logo:hover {
+    cursor: pointer;
+}
+
+.header__left, .header__icons {
+    display:flex;
+}
+
+.header__icons:hover {
+    cursor: pointer;
+}
+
+.header__input {
+    display:flex;
+    align-items: center;
+    width: 40%;
+    border: 1px solid lightgray;
+}
+
+.header__input input {
+    flex: 1;
+    border: none;
+    height: 33px;
+}
+
+.header__input input:focus {
+    outline-color: rgb(13, 13, 176);
+}
+
+.header__input input[placeholder] {
+    font-size: 15px;
+}
+
+.header__inputButton {
+    width: 100% !important;
+    color: black;
+}
+
+.header__icon {
+    margin-right: 10px;
+}
+
+.header__inputButtonBg {
+    background-color: #fafafa;
+    border-left: 1px solid lightgray;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    height: 35px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.header__inputButtonBg:hover {
+    background-color: rgb(245, 241, 241);
+    cursor: pointer;
+}
+
+.header__onclickgrid {
+    display: grid;
+}
+
+.header__onclickgrid:hover {
+    cursor: pointer;
+}
+
+.header__onclickgrid * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.header__menu {
+    padding-left: 6px;
+    padding-top: 6px;
+}
+
+.header__onclickgrid:active .header__menuonclick {
+    animation-name: menuclick;
+    animation-duration: 4s;
+}
+
+@keyframes menuclick {
+    0% {fill: lightgray;}
+    12% {fill: white; stroke: lightgray;}
+    100% {stroke: white;}
+    
+}
+
+@media screen and (max-width:660px) {
+    .searchbuttonelement > * {
+        display: none;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .header__input > * {
+        display: none;
+    }
+    .header__input {
+        display: none;
+    }
+}

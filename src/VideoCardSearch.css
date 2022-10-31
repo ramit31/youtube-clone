@@ -1,0 +1,74 @@
+.videocardsearch {
+    margin-top: 15px;
+    display: flex;
+}
+
+.videocardsearch__videothumbnail img {
+    height: 180px;
+    width: 320px;
+}
+
+.videocardsearch__videothumbnail span{
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 1px 4px;
+    font-size: 13px;
+    border-radius: 0.2em;
+    font-weight: bold;
+    transform: translate(-37px, 156px);
+}
+
+.videocardsearch__info {
+    margin-left: 15px;
+}
+
+.videocardsearch__channelinfo {
+    display: flex;
+}
+
+.videocardsearch__avatar {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.videocardsearch__videotitle p {
+    max-height: 2.8em;
+    max-width: 52vw;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    font-size: 20px;
+    color: black;
+}
+
+.videocardsearch__stats {
+    font-size: 12px;
+    color: gray;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.videocardsearch__channeltitle {
+    font-size: 12px;
+    color: gray;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.videocardsearch__channeltitle:hover {
+    color: black;
+}
+
+.videocardsearch__description {
+    max-height: 1.6em;
+    font-size: 12px;
+    color: gray;
+    font-weight: 400;
+    margin-top: 14px;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    max-width: 52vw;
+}
