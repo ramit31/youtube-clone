@@ -2,6 +2,11 @@
 
 Youtube clone using React.
 
+1. [Core packages](#core-packages)
+2. [Features](#features)
+3. [Local Setup](#running-locally)
+4. [Demo](#demo)
+
 ## Core packages
 
 1. ReactJs
