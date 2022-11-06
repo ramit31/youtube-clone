@@ -8,8 +8,10 @@ import HoverDescription from './HoverDescription';
 import './HoverDescription.css';
 import {Link, useNavigate} from 'react-router-dom';
 import {useState} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {menuSizeChange, updateMenuFlag, selectExpanded} from './data/menuSlice';
 
-function Header(props){
+function Header(){
     const [inputSearch,setInputSearch]=useState('');
     let history=useNavigate();
 
@@ -24,13 +26,16 @@ function Header(props){
         if (inputSearch) {
             // search button clicked
             history(`/search/${inputSearch}`);
-          } 
+        } 
     }
+
+    const expanded = useSelector(selectExpanded);
+    const dispatch = useDispatch();
 
     return (
         <div className="header">
             <div className="header__left">
-                <div className="header__onclickgrid" onClick={()=>props.menuSize(props.expanded)}>
+                <div className="header__onclickgrid" onClick={()=>dispatch(menuSizeChange({expandedFlag:expanded}))}>
                     <svg width="36" height="36">
                         <circle cx="18" cy="18" r="18" fill="white" className="header__menuonclick" />
                     </svg>
@@ -39,7 +44,7 @@ function Header(props){
                 <div className="hoverdescriptionparent">
                     <Link to="/" className="hoverdescription"><img className="header__logo"
                     src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
-                    alt="YouTube Home" onClick={()=>props.updateMenu(0)} /></Link>
+                    alt="YouTube Home" onClick={()=>dispatch(updateMenuFlag("Home"))} /></Link>
                     <HoverDescription title="YouTube Home" />
                 </div>
             </div>
@@ -53,11 +58,11 @@ function Header(props){
                 </div>
             </div>
             <div className="header__icons">
-                <div className="hoverdescriptionparent">
+                <div className="hoverdescriptionparent hoverdescriptionparenthomerticon">
                     <VideoCallIcon className="header__icon hoverdescription" />
                     <HoverDescription title="Create" />
                 </div>
-                <div className="hoverdescriptionparent">
+                <div className="hoverdescriptionparent hoverdescriptionparenthomerticon">
                     <NotificationsIcon className="header__icon hoverdescription" />
                     <HoverDescription title="Notifications" />
                 </div>

@@ -12,14 +12,15 @@ Youtube clone using React.
 1. ReactJs
 2. React-router
 3. Material UI
+4. Redux
 
 ## Features
 
 1. Home page
 2. Search page
-3. Hover text
+3. Hover text with CSS animation
 4. Collapsible side menu
-5. State of side menu option is maintained
+5. State of side menu option is maintained in Redux store
 6. Responsive web design
 7. Channel and video links clickable
 

@@ -11,6 +11,7 @@ a {
 
 .videocard__videothumbnail {
     display: flex;
+    position: relative;
 }
 
 .videocard__videothumbnail img {

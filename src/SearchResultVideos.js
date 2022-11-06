@@ -3,15 +3,19 @@ import {VideoCardSearch} from './VideoCard';
 import ytMeta from './data/youtube-metadata.json';
 import TuneIcon from '@mui/icons-material/Tune';
 import {useEffect} from 'react';
+import { useDispatch } from 'react-redux';
+import { menuSizeChange } from './data/menuSlice';
 
-function SearchResultVideos({menuSize}) {
+function SearchResultVideos() {
+    const dispatch = useDispatch();
+
     useEffect(()=>{
         const handleResize = () => {
             if(window.innerWidth<1300){
-                menuSize(true);
+                dispatch(menuSizeChange({expandedFlag:true}));
             }
             else{
-                menuSize(false);
+                dispatch(menuSizeChange({expandedFlag:false}));
             }
         }
 
@@ -20,11 +24,10 @@ function SearchResultVideos({menuSize}) {
         return ()=>{
             window.removeEventListener("resize",handleResize);
         }
-    },[]);
+    },[dispatch]);
 
     return (
         <div className="searchresultvideos">
-            {/* <h1>{windowWidth}</h1> */}
             <div className="searchresultvideos__filter">
                 <TuneIcon className="searchresultvideos__icon" />
                 <h4>FILTERS</h4>
