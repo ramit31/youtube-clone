@@ -4,7 +4,7 @@ const menuSlice = createSlice({
     name:'menu',
     initialState: {
         isExpanded:(window.innerWidth>=1300)?true:false, 
-        menuSelectedFlag:"home"
+        menuSelectedFlag:"Home"
     },
     reducers: {
         menuSizeChange:(state,action) => {
