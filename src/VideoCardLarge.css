@@ -2,6 +2,7 @@
     margin-left: 7px;
     margin-right: 7px;
     margin-bottom: 40px;
+    min-width: 0px;
 }
 
 .videocardlarge__videothumbnail {
@@ -47,11 +48,12 @@
 
 .videocardlarge__channeltitlestats {
     margin-left: 12px;
+    min-width: 0px;
 }
 
 .videocardlarge__channeltitlestats h4 {
     max-height: 3.10em;
-    max-width: 279px;
+    max-width: 265px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -68,4 +70,24 @@
 
 .videocardlarge__channeltitlestats a:hover {
     color: black;
+}
+
+@media only screen and (max-width:550px) {
+    .videocardlarge__videothumbnail {
+        max-height: 120px;
+    }
+
+    .videocardlarge__avatar {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .videocardlarge__channeltitlestats h4{
+        max-width: 110px;
+        font-size: 14px;
+    }
+
+    .videocardlarge__channeltitlestats a,p {
+        font-size: 12px;
+    }
 }
