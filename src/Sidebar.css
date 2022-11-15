@@ -1,5 +1,4 @@
 .sidebar {
-    width: 200px;
     min-width: 200px;
 }
 
@@ -14,4 +13,14 @@
     margin-top: 10px;
     margin-bottom: 10px;
     width: 95%;
+}
+
+@media only screen and (max-width: 550px) {
+    .sidebar {
+        min-width: 150px;
+    }
+
+    .sidebarmini {
+        width: 50px;
+    }
 }

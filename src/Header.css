@@ -6,7 +6,6 @@
     position: sticky;
     z-index: 100;
     background-color: white;
-    min-width: 625px;
 }
 
 .header__logo {
@@ -33,7 +32,7 @@
     flex: 1;
     border: none;
     height: 33px;
-    min-width: 100px;
+    min-width: 30px;
     z-index: 100;
 }
 
@@ -101,4 +100,57 @@
 @keyframes menuclick {
     0% {fill: white; stroke: lightgray;}
     100% {fill: white; stroke: white;}
+}
+
+@media only screen and (max-width: 550px) {
+    .header {
+        padding: 11px;
+    }
+
+    .header__left {
+        align-items: center;
+    }
+
+    .header__onclickgrid {
+        align-items: center;
+        justify-items: center;
+    }
+
+    .header__logo {
+        height: 16px;
+        margin-left: 4px;
+    }
+
+    .header__menu {
+        width: 22px !important;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+
+    .header__input {
+        width: 35%;
+    }
+
+    .header__input input {
+        height: 23px;
+    }
+
+    .header__inputButtonBg {
+        height: 25px;
+        width: 33px;
+    }
+
+    .header__icons {
+        align-items: center;
+    }
+
+    .header__icon {
+        margin-right: 5px;
+        width: 22px !important;
+    }
+
+    .header__icons__loginicon {
+        width: 22px !important;
+        height: 22px !important;
+    }
 }

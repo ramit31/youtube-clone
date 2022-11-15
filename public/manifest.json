@@ -3,19 +3,30 @@
   "name": "Create YouTube Clone",
   "icons": [
     {
+      "src": "maskable_icon.png",
+      "sizes": "660x660",
+      "type": "image/png",
+      "purpose":"any maskable"
+    },
+    {
       "src": "youtube-logo.png",
       "sizes": "840x859",
       "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "256.png",
+      "type": "image/png",
+      "sizes": "256x256"
     }
   ],
   "start_url": ".",

@@ -34,3 +34,18 @@
 .sidebarrow.selected .sidebarrow__icon {
     color: black;
 }
+
+@media only screen and (max-width: 550px) {
+ .sidebarrow {
+    padding-left: 4px;
+}
+
+ .sidebarrow__icon {
+    width: 22px !important;
+ }
+
+ .sidebarrow__title {
+    font-size: 12px;
+    margin-left: 14px;
+ }
+}

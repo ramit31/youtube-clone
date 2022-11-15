@@ -29,3 +29,14 @@
 .sidebarrowmini.selected .sidebarrowmini__icon {
     color: black;
 }
+
+@media only screen and (max-width: 550px) {
+    .sidebarrowmini__icon {
+        width: 22px !important;
+    }
+
+    .sidebarrowmini__title {
+        margin-top: 2px;
+        font-size: 7px;
+    }
+}

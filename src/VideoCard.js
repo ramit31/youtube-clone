@@ -16,7 +16,7 @@ function VideoCard(props) {
         return (<a href={props.videoLink} className="videocard">
                     <div className="videocard__videothumbnail">
                         <img src={props.videoThumbnail.url} alt={props.title} />
-                        <span>{timeFormat(props.duration)}</span>
+                        <div><span>{timeFormat(props.duration)}</span></div>
                     </div>
                     <div className="videocard__info">
                         <a href={props.channelLink} className="videocard__channelthumbnail">
@@ -40,7 +40,7 @@ function VideoCard(props) {
         return (<a href={props.videoLink} className="videocardlarge">
                     <div className="videocardlarge__videothumbnail">
                         <img src={props.videoThumbnail.url} alt={props.title} />
-                        <span>{timeFormat(props.duration)}</span>
+                        <div><span>{timeFormat(props.duration)}</span></div>
                     </div>
                     <div className="videocard__info">
                         <a href={props.channelLink} className="videocard__channelthumbnail">
@@ -67,7 +67,7 @@ class VideoCardSearch extends React.Component {
         return (<a href={this.props.videoLink} className="videocardsearch">
                 <div className="videocardsearch__videothumbnail">
                     <img src={this.props.videoThumbnail.url} alt={this.props.title} />
-                    <span>{timeFormat(this.props.duration)}</span>
+                    <div><span>{timeFormat(this.props.duration)}</span></div>
                 </div>
                 <div className="videocardsearch__info">
                     <div className="hoverdescriptionparent videocardsearch__videotitle">

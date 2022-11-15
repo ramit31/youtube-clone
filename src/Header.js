@@ -7,11 +7,38 @@ import './Header.css';
 import HoverDescription from './HoverDescription';
 import './HoverDescription.css';
 import {Link, useNavigate} from 'react-router-dom';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {menuSizeChange, updateMenuFlag, selectExpanded} from './data/menuSlice';
 
 function Header(){
+    useEffect(()=>{
+        function changeMenuOnClick(event) {
+            if(event.matches) {
+                document.getElementsByClassName("header__menuonclick")[0].setAttribute("r","14");
+                document.getElementsByClassName("header__menuonclick")[0].setAttribute("cx","14");
+                document.getElementsByClassName("header__menuonclick")[0].setAttribute("cy","14");
+                document.getElementsByClassName("header__onclickgrid")[0].querySelector('svg').setAttribute("height","28");
+                document.getElementsByClassName("header__onclickgrid")[0].querySelector('svg').setAttribute("width","28");
+            }
+            else{
+                document.getElementsByClassName("header__menuonclick")[0].setAttribute("r","18");
+                document.getElementsByClassName("header__menuonclick")[0].setAttribute("cx","18");
+                document.getElementsByClassName("header__menuonclick")[0].setAttribute("cy","18");
+                document.getElementsByClassName("header__onclickgrid")[0].querySelector('svg').setAttribute("height","36");
+                document.getElementsByClassName("header__onclickgrid")[0].querySelector('svg').setAttribute("width","36"); 
+            }
+        };
+
+        let media = window.matchMedia("(max-width: 550px)");
+        changeMenuOnClick(media);
+        media.addEventListener("change",changeMenuOnClick);
+
+        return ()=>{
+            media.removeEventListener("change",changeMenuOnClick);
+        }  
+    }, []);
+
     const [inputSearch,setInputSearch]=useState('');
     let history=useNavigate();
 
@@ -66,7 +93,7 @@ function Header(){
                     <NotificationsIcon className="header__icon hoverdescription" />
                     <HoverDescription title="Notifications" />
                 </div>
-                <Avatar />
+                <Avatar className="header__icons__loginicon" />
             </div>
         </div>
     );

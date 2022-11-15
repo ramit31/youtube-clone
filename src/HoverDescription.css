@@ -35,3 +35,9 @@
 .hoverdescription:hover + .hoverdescriptionhidden.hoverdescriptionhiddensearch {
     left: 15%;
 }
+
+@media only screen and (max-width: 600px) {
+    .hoverdescription:hover + .hoverdescriptionhidden.hoverdescriptionhiddensearch {
+    left: 0%;
+    }
+}

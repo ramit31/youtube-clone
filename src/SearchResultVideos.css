@@ -4,9 +4,9 @@
     flex: 1;
     padding-left: 40px;
     padding-right: 4vw;
-    margin-right: auto;
     padding-top: 5px;
-    min-width: 550px;
+    min-width: 100px;
+    overflow-x: hidden;
 }
 
 .searchresultvideos__filter {
@@ -31,4 +31,10 @@ hr {
 
 .searchresultvideos__filter:hover {
     color: black;
+}
+
+@media only screen and (max-width: 550px) {
+    .searchresultvideos {
+        padding-left: 20px;
+    }
 }
