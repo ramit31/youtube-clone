@@ -23,6 +23,7 @@ a {
     grid-column: 1/span 2;
     max-height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .videocard__videothumbnail div {
@@ -79,14 +80,4 @@ a {
 
 .videocard__channeltitlestats a:hover {
     color: black;
-}
-
-@media only screen and (max-width:550px) {
-    .videocard__videothumbnail {
-        max-height: 120px;
-    }
-
-    .videocard__channeltitlestats h4{
-        max-width: 110px;
-    }
 }

@@ -19,6 +19,7 @@
     grid-column: 1/span 2;
     max-height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .videocardlarge__videothumbnail div {
@@ -72,18 +73,13 @@
     color: black;
 }
 
-@media only screen and (max-width:550px) {
-    .videocardlarge__videothumbnail {
-        max-height: 120px;
-    }
-
+@media only screen and (max-width:380px) {
     .videocardlarge__avatar {
         width: 30px !important;
         height: 30px !important;
     }
 
     .videocardlarge__channeltitlestats h4{
-        max-width: 110px;
         font-size: 14px;
     }
 
