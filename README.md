@@ -21,7 +21,7 @@ Youtube clone using React.
 3. Hover text with CSS animation
 4. Collapsible side menu
 5. State of side menu option is maintained in Redux store
-6. Responsive web design and Progressive Web App (PWA)
+6. Responsive web design, mobile friendly and Progressive Web App (PWA)
 7. Channel and video links clickable
 
 ## Running locally
