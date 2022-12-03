@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import RecommendedVideos from './RecommendedVideos';
+import Header from './components/header/Header';
+import Sidebar from './components/sidemenu/Sidebar';
+import RecommendedVideos from './pages/homepage/RecommendedVideos';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import SearchResultVideos from './SearchResultVideos';
+import SearchResultVideos from './pages/searchpage/SearchResultVideos';
 
 class App extends React.Component {
   render() {

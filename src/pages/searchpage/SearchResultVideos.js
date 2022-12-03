@@ -1,10 +1,10 @@
 import './SearchResultVideos.css';
-import {VideoCardSearch} from './VideoCard';
-import ytMeta from './data/youtube-metadata.json';
+import {VideoCardSearch} from './components/VideoCardSearch';
+import ytMeta from '../../data/youtube-metadata.json';
 import TuneIcon from '@mui/icons-material/Tune';
 import {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
-import { menuSizeChange } from './data/menuSlice';
+import { menuSizeChange } from '../../store/menuSlice';
 
 function SearchResultVideos() {
     const dispatch = useDispatch();

@@ -4,12 +4,12 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
 import './Header.css';
-import HoverDescription from './HoverDescription';
-import './HoverDescription.css';
+import HoverDescription from '../hoverdescription/HoverDescription';
+import '../hoverdescription/HoverDescription.css';
 import {Link, useNavigate} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {menuSizeChange, updateMenuFlag, selectExpanded} from './data/menuSlice';
+import {menuSizeChange, updateMenuFlag, selectExpanded} from '../../store/menuSlice';
 
 function Header(){
     useEffect(()=>{

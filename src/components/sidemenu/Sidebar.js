@@ -10,7 +10,7 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import SlideshowIcon from '@mui/icons-material/Slideshow';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useSelector } from 'react-redux';
-import {selectExpanded} from './data/menuSlice';
+import {selectExpanded} from '../../store/menuSlice';
 
 function Sidebar() {
     const expanded = useSelector(selectExpanded);

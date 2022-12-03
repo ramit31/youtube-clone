@@ -1,9 +1,9 @@
 import './RecommendedVideos.css';
-import {VideoCard} from './VideoCard';
-import ytMeta from './data/youtube-metadata.json';
+import {VideoCard} from './components/VideoCard';
+import ytMeta from '../../data/youtube-metadata.json';
 import {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
-import { menuSizeChange } from './data/menuSlice';
+import { menuSizeChange } from '../../store/menuSlice';
 
 function RecommendedVideos() {
     const dispatch = useDispatch();

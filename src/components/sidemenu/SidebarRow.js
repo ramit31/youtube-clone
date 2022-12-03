@@ -2,7 +2,7 @@ import './SidebarRow.css';
 import './SidebarRowMini.css';
 import {Link} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import {updateMenuFlag, selectMenuFlag} from './data/menuSlice';
+import {updateMenuFlag, selectMenuFlag} from '../../store/menuSlice';
 
 function SidebarRow(props) {
     const IconComponent = props.icon;
