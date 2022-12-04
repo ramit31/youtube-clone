@@ -55,4 +55,10 @@ const singleLineDescription =(descriptionString)=>{
     return outDescription
 }
 
-export {formatViewsCount, timeFormat, dayFormat, singleLineDescription};
+// Get Id
+const getId = (videoLink)=>{
+    let linkArr = videoLink.split("/");
+    return linkArr[linkArr.length-1];
+}
+
+export {formatViewsCount, timeFormat, dayFormat, singleLineDescription, getId};

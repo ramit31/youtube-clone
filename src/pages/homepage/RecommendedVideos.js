@@ -2,11 +2,13 @@ import './RecommendedVideos.css';
 import {VideoCard} from './components/VideoCard';
 import ytMeta from '../../data/youtube-metadata.json';
 import {useEffect} from 'react';
-import { useDispatch } from 'react-redux';
-import { menuSizeChange } from '../../store/menuSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { menuSizeChange, selectExpanded } from '../../store/menuSlice';
+import {getId} from '../../utils/ytUtils';
 
 function RecommendedVideos() {
     const dispatch = useDispatch();
+    const expanded = useSelector(selectExpanded);
 
     useEffect(()=>{
         const handleResize = () => {
@@ -27,11 +29,21 @@ function RecommendedVideos() {
     
     return (
         <div className="recommendedVideos">
-            {ytMeta.map(element=>{
-            return <VideoCard title={element.title} videoThumbnail={element.thumbnail} channelTitle={element.channelTitle}
-            duration={element.duration} viewCount={element.viewCount} channelThumbnail={element.channelThumbnail}
-            channelLink={element.channelLink} videoLink={element.videoLink} published={element.published} />;
-            })}
+            {expanded?
+                ytMeta.map(element=>{
+                return <VideoCard title={element.title} videoThumbnail={element.thumbnail} channelTitle={element.channelTitle}
+                duration={element.duration} viewCount={element.viewCount} channelThumbnail={element.channelThumbnail}
+                channelLink={element.channelLink} videoLink={element.videoLink} published={element.published}
+                cssclass={""} key={getId(element.videoLink)} />;
+                })
+            :
+                ytMeta.map(element=>{
+                return <VideoCard title={element.title} videoThumbnail={element.thumbnail} channelTitle={element.channelTitle}
+                duration={element.duration} viewCount={element.viewCount} channelThumbnail={element.channelThumbnail}
+                channelLink={element.channelLink} videoLink={element.videoLink} published={element.published}
+                cssclass={"large"} key={getId(element.videoLink)} />;
+                })
+            }
         </div>
     );
 }

@@ -5,6 +5,7 @@ import TuneIcon from '@mui/icons-material/Tune';
 import {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import { menuSizeChange } from '../../store/menuSlice';
+import {getId} from '../../utils/ytUtils';
 
 function SearchResultVideos() {
     const dispatch = useDispatch();
@@ -37,7 +38,7 @@ function SearchResultVideos() {
             return <VideoCardSearch title={element.title} videoThumbnail={element.thumbnail} channelTitle={element.channelTitle}
             duration={element.duration} viewCount={element.viewCount} channelThumbnail={element.channelThumbnail}
             channelLink={element.channelLink} videoLink={element.videoLink} published={element.published}
-            description={element.description} />;
+            description={element.description} key={getId(element.videoLink)} />;
             })}
         </div>
     );

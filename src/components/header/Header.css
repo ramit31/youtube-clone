@@ -65,11 +65,6 @@
     align-items: center;
 }
 
-.header__inputButtonBg:hover {
-    background-color: rgb(245, 241, 241);
-    cursor: pointer;
-}
-
 .header__onclickgrid {
     display: grid;
 }
@@ -88,8 +83,15 @@
     padding-top: 6px;
 }
 
-.header__onclickgrid:hover .header__menuonclick {
-    fill: lightgray;
+@media (hover:hover) {
+    .header__onclickgrid:hover .header__menuonclick {
+        fill: lightgray;
+    }
+
+    .header__inputButtonBg:hover {
+        background-color: rgb(245, 241, 241);
+        cursor: pointer;
+    }
 }
 
 .header__onclickgrid:active .header__menuonclick {

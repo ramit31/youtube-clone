@@ -12,31 +12,33 @@
     justify-content: center;
 }
 
-.hoverdescription:hover + .hoverdescriptionhidden {
-    display: inline-block;
-    background-color: rgb(60, 55, 55);
-    color: white;
-    opacity: 80%;
-    position: absolute;
-    padding: 12px 7px;
-    margin-top: 120px;
-    font-size: 12px;
-    border-radius: 0.3em;
-    z-index: 100;
-    animation-name: descriptionface;
-    animation-duration: 0.5s;
+@media (hover:hover) {
+    .hoverdescription:hover + .hoverdescriptionhidden {
+        display: inline-block;
+        background-color: rgb(60, 55, 55);
+        color: white;
+        opacity: 80%;
+        position: absolute;
+        padding: 12px 7px;
+        margin-top: 120px;
+        font-size: 12px;
+        border-radius: 0.3em;
+        z-index: 100;
+        animation-name: descriptionface;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes descriptionface {
+        0% {opacity: 0%;}
+        100% {opacity: 80%;}
+    }
+
+    .hoverdescription:hover + .hoverdescriptionhidden.hoverdescriptionhiddensearch {
+        left: 15%;
+    }
 }
 
-@keyframes descriptionface {
-    0% {opacity: 0%;}
-    100% {opacity: 80%;}
-}
-
-.hoverdescription:hover + .hoverdescriptionhidden.hoverdescriptionhiddensearch {
-    left: 15%;
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (hover:hover) {
     .hoverdescription:hover + .hoverdescriptionhidden.hoverdescriptionhiddensearch {
     left: 0%;
     }

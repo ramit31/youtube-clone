@@ -18,9 +18,11 @@
     color: black;
 }
 
-.sidebarrow:hover {
-    background-color: rgb(232, 229, 229);
-    cursor: pointer;
+@media (hover:hover) {
+    .sidebarrow:hover {
+        background-color: rgb(232, 229, 229);
+        cursor: pointer;
+    }
 }
 
 .sidebarrow.selected {

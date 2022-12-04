@@ -17,9 +17,11 @@
 
 }
 
-.sidebarrowmini:hover {
-    background-color: rgb(232, 229, 229);
-    cursor: pointer;
+@media (hover:hover) {
+    .sidebarrowmini:hover {
+        background-color: rgb(232, 229, 229);
+        cursor: pointer;
+    }
 }
 
 .sidebarrowmini.selected .sidebarrowmini__title {
