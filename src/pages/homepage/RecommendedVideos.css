@@ -1,8 +1,38 @@
 .recommendedVideos {
-    display: flex;
-    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
     padding: 20px 20px;
     background-color: #f9f9f9;
-    flex-wrap: wrap;
     overflow: hidden;
+    width: 100%;
+}
+
+@media only screen and (min-width:492px) {
+    .recommendedVideos {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only screen and (min-width:672px) {
+    .recommendedVideos {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media only screen and (min-width:1008px) {
+    .recommendedVideos {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media only screen and (min-width:1504px) {
+    .recommendedVideos {
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+@media only screen and (min-width:1804px) {
+    .recommendedVideos {
+        grid-template-columns: repeat(6,1fr);
+    }
 }
