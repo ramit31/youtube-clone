@@ -18,27 +18,31 @@ function Sidebar() {
     if(expanded){
         return (
             <div className="sidebar">
-                <SidebarRow linkTo="/" icon={HomeIcon} title="Home" />
-                <SidebarRow linkTo="/trending" icon={WhatshotIcon} title="Trending" />
-                <SidebarRow linkTo="/subscription" icon={SubscriptionsIcon} title="Subscriptions" />
-                <hr />
-                <SidebarRow linkTo="/library" icon={VideoLibraryIcon} title="Library" />
-                <SidebarRow linkTo="/history" icon={HistoryIcon} title="History" />
-                <SidebarRow linkTo="/your videos" icon={SlideshowIcon} title="Your videos" />
-                <SidebarRow linkTo="/watch later" icon={WatchLaterIcon} title="Watch later" />
-                <SidebarRow linkTo="/liked videos" icon={ThumbUpIcon} title="Liked videos" />
-                <SidebarRow linkTo="" icon={ExpandMoreIcon} title="Show more" />
-                <hr />
+                <div className="sidebar__sticky">
+                    <SidebarRow linkTo="/" icon={HomeIcon} title="Home" />
+                    <SidebarRow linkTo="/trending" icon={WhatshotIcon} title="Trending" />
+                    <SidebarRow linkTo="/subscription" icon={SubscriptionsIcon} title="Subscriptions" />
+                    <hr />
+                    <SidebarRow linkTo="/library" icon={VideoLibraryIcon} title="Library" />
+                    <SidebarRow linkTo="/history" icon={HistoryIcon} title="History" />
+                    <SidebarRow linkTo="/your videos" icon={SlideshowIcon} title="Your videos" />
+                    <SidebarRow linkTo="/watch later" icon={WatchLaterIcon} title="Watch later" />
+                    <SidebarRow linkTo="/liked videos" icon={ThumbUpIcon} title="Liked videos" />
+                    <SidebarRow linkTo="" icon={ExpandMoreIcon} title="Show more" />
+                    <hr />
+                </div>
             </div>
         );
     }
     else{
         return (
             <div className="sidebarmini">
-                <SidebarRowMini linkTo="/" icon={HomeIcon} title="Home" />
-                <SidebarRowMini linkTo="/trending" icon={WhatshotIcon} title="Trending" />
-                <SidebarRowMini linkTo="/subscription" icon={SubscriptionsIcon} title="Subscriptions" />
-                <SidebarRowMini linkTo="/library" icon={VideoLibraryIcon} title="Library" />
+                <div className="sidebar__sticky">
+                    <SidebarRowMini linkTo="/" icon={HomeIcon} title="Home" />
+                    <SidebarRowMini linkTo="/trending" icon={WhatshotIcon} title="Trending" />
+                    <SidebarRowMini linkTo="/subscription" icon={SubscriptionsIcon} title="Subscriptions" />
+                    <SidebarRowMini linkTo="/library" icon={VideoLibraryIcon} title="Library" />
+                </div>
             </div>
         );
     }

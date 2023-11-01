@@ -90,7 +90,7 @@
     padding-top: 6px;
 }
 
-@media (hover:hover) {
+@media (hover:hover) and (pointer:fine) {
     .header__onclickgrid:hover .header__menuonclick {
         fill: lightgray;
     }

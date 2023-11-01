@@ -19,7 +19,7 @@
     color: black;
 }
 
-@media (hover:hover) {
+@media (hover:hover) and (pointer:fine) {
     .sidebarrow:hover {
         background-color: rgb(232, 229, 229);
         cursor: pointer;
